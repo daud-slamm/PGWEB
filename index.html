@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone 3D - Innovación en Tecnología Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">🎮 TechZone 3D</h1>
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="product.html">Productos</a>
+                <a href="cart.html">Carrito</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <div id="cart-icon" onclick="location.href='cart.html'">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Innovación en Modelos 3D para Gamers</h2>
+            <p class="hook">Calidad y tecnología a tu alcance - Diseños exclusivos para elevar tu experiencia gaming</p>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-title">Productos Destacados</h2>
+        <div id="product-list">
+            <div class="product-container red" data-product-id="1" onclick="location.href='product.html?id=1'">
+                <div class="product-icon">⌨️</div>
+                <h3>Teclado Mecánico</h3>
+                <p>RGB Gaming Pro</p>
+            </div>
+            <div class="product-container blue" data-product-id="2" onclick="location.href='product.html?id=2'">
+                <div class="product-icon">🖱️</div>
+                <h3>Ratón Gaming</h3>
+                <p>Precisión Ultra</p>
+            </div>
+            <div class="product-container green" data-product-id="3" onclick="location.href='product.html?id=3'">
+                <div class="product-icon">🎮</div>
+                <h3>Mando Gaming</h3>
+                <p>Control Total</p>
+            </div>
+            <div class="product-container purple" data-product-id="4" onclick="location.href='product.html?id=4'">
+                <div class="product-icon">🎧</div>
+                <h3>Auriculares</h3>
+                <p>Sonido Envolvente</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechZone 3D - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

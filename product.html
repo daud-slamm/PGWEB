@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - TechZone 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">🎮 TechZone 3D</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="product.html" class="active">Productos</a>
+                <a href="cart.html">Carrito</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <div id="cart-icon" onclick="location.href='cart.html'">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-detail">
+        <div class="product-detail-container">
+            <div class="product-image" id="product-image">
+                <div class="image-placeholder">🎮</div>
+            </div>
+            <div class="product-info">
+                <h2 id="product-title">Producto</h2>
+                <p class="product-description" id="product-description">Descripción del producto</p>
+                <div class="product-price">
+                    <span class="price">€<span id="product-price">99.99</span></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart()">Añadir al Carrito</button>
+                <a href="index.html" class="btn-back">← Volver a productos</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechZone 3D - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Función para obtener ID del producto de la URL
+        function getProductId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id') || '1';
+        }
+
+        // Definición de productos
+        const products = {
+            "1": {
+                name: "Teclado Mecánico RGB Gaming Pro",
+                description: "Teclado mecánico con retroiluminación RGB personalizable, switches mecánicos de alta durabilidad y teclas programables. Perfecto para gamers profesionales y entusiastas que buscan precisión y velocidad en cada pulsación.",
+                price: "89.99",
+                icon: "⌨️"
+            },
+            "2": {
+                name: "Ratón Gaming Precisión Ultra",
+                description: "Ratón ergonómico con sensor óptico de alta precisión hasta 16000 DPI, múltiples botones personalizables y retroiluminación RGB. Diseñado para ofrecer máximo control y comodidad durante largas sesiones de juego.",
+                price: "59.99",
+                icon: "🖱️"
+            },
+            "3": {
+                name: "Mando Gaming Control Total",
+                description: "Mando gaming inalámbrico con tecnología de baja latencia, respuesta rápida y diseño ergonómico. Compatible con múltiples plataformas. Batería de larga duración para sesiones de juego extensas sin interrupciones.",
+                price: "69.99",
+                icon: "🎮"
+            },
+            "4": {
+                name: "Auriculares Sonido Envolvente",
+                description: "Auriculares gaming con sonido envolvente 7.1, cancelación activa de ruido y micrófono profesional extraíble. Almohadillas de espuma viscoelástica para máxima comodidad. Diseño premium con iluminación LED.",
+                price: "79.99",
+                icon: "🎧"
+            }
+        };
+
+        // Cargar información del producto
+        const productId = getProductId();
+        const product = products[productId];
+
+        if (product) {
+            document.getElementById('product-title').textContent = product.name;
+            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('product-price').textContent = product.price;
+            document.querySelector('.image-placeholder').textContent = product.icon;
+        }
+
+        function addToCart() {
+            alert('Producto añadido al carrito');
+        }
+    </script>
+</body>
+</html>

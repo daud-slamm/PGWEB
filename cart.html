@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - TechZone 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">🎮 TechZone 3D</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="product.html">Productos</a>
+                <a href="cart.html" class="active">Carrito</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <div id="cart-icon" onclick="location.href='cart.html'">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <h2 class="section-title">Tu Carrito de Compras</h2>
+        <div class="cart-container">
+            <div id="cart-items" class="cart-items">
+                <p class="empty-cart">Tu carrito está vacío. ¡Empieza a comprar!</p>
+            </div>
+            <div class="cart-summary">
+                <h3>Resumen del Pedido</h3>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">€0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Envío:</span>
+                    <span>€5.99</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="cart-total">€5.99</span>
+                </div>
+                <button class="btn-checkout">Proceder al Pago</button>
+                <button class="btn-clear" id="clear-cart">Vaciar Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechZone 3D - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

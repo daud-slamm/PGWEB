@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito - TechZone 3D</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles-premium.css">
     <style>
         * {
@@ -18,9 +20,14 @@
             background: #0f0f1e;
             color: #ffffff;
             line-height: 1.6;
+            background-image: url('bg-gaminggg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #0f0f1e;
         }
 
-        /* ===== HEADER ===== */
         header {
             background: rgba(15, 15, 30, 0.95);
             backdrop-filter: blur(10px);
@@ -54,9 +61,17 @@
         }
 
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         nav {
@@ -97,22 +112,38 @@
         }
 
         #cart-icon {
-            background: linear-gradient(135deg, #e74c3c, #e67e22);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
+            position: relative;
+            background: linear-gradient(135deg,
+                    rgba(231, 76, 60, 0.8),
+                    rgba(230, 126, 34, 0.65));
+            padding: 0.9rem 1.7rem;
+            border-radius: 999px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 0 20px rgba(230, 126, 34, 0.5);
+            gap: 0.6rem;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow:
+                0 16px 38px rgba(0, 0, 0, 0.65),
+                0 0 24px rgba(231, 76, 60, 0.9);
+            transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
         }
 
+
         #cart-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 40px rgba(230, 126, 34, 0.8);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px) scale(1.03);
+            background: linear-gradient(135deg,
+                    rgba(231, 76, 60, 0.95),
+                    rgba(230, 126, 34, 0.85));
+            box-shadow:
+                0 22px 50px rgba(0, 0, 0, 0.8),
+                0 0 32px rgba(231, 76, 60, 1);
         }
 
         #cart-count {
@@ -283,8 +314,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         .product-container h3 {
@@ -359,27 +397,40 @@
 
         .btn-add-cart,
         .btn-checkout {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            border: none;
+            position: relative;
+            width: 100%;
             padding: 1.2rem 2.5rem;
-            border-radius: 50px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: linear-gradient(135deg,
+                    rgba(52, 152, 219, 0.25),
+                    rgba(41, 128, 185, 0.05));
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            color: #ffffff;
             font-size: 1rem;
             font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
             text-transform: uppercase;
             letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow:
+                0 18px 40px rgba(0, 0, 0, 0.6),
+                0 0 25px rgba(52, 152, 219, 0.65);
+            transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+            margin-top: 1rem;
         }
 
         .btn-add-cart:hover,
         .btn-checkout:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(52, 152, 219, 0.8);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px) scale(1.02);
+            background: linear-gradient(135deg,
+                    rgba(52, 152, 219, 0.4),
+                    rgba(41, 128, 185, 0.15));
+            box-shadow:
+                0 25px 55px rgba(0, 0, 0, 0.75),
+                0 0 35px rgba(52, 152, 219, 0.9);
         }
 
         .btn-back {
@@ -451,22 +502,37 @@
         }
 
         .btn-clear {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
-            border: none;
+            position: relative;
+            width: 100%;
             padding: 1rem 2rem;
-            border-radius: 50px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: linear-gradient(135deg,
+                    rgba(231, 76, 60, 0.28),
+                    rgba(192, 57, 43, 0.06));
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            color: #ffffff;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 1.5rem;
-            box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+            box-shadow:
+                0 16px 36px rgba(0, 0, 0, 0.6),
+                0 0 22px rgba(231, 76, 60, 0.75);
+            transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+            margin-top: 1.2rem;
         }
 
+
         .btn-clear:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(231, 76, 60, 0.8);
+            transform: translateY(-3px) scale(1.02);
+            background: linear-gradient(135deg,
+                    rgba(231, 76, 60, 0.45),
+                    rgba(192, 57, 43, 0.18));
+            box-shadow:
+                0 24px 50px rgba(0, 0, 0, 0.8),
+                0 0 32px rgba(231, 76, 60, 0.95);
         }
 
         /* ===== CONTACT PAGE ===== */
@@ -634,6 +700,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -657,7 +724,7 @@
                 <p class="empty-cart">🛒 Tu carrito está vacío. ¡Empieza a comprar productos gaming!</p>
             </div>
             <div class="cart-summary">
-                <h3>📊 Resumen del Pedido</h3>
+                <h3>Resumen del Pedido</h3>
                 <div class="summary-line">
                     <span>Subtotal:</span>
                     <span id="cart-subtotal">€0.00</span>
@@ -667,11 +734,11 @@
                     <span>€5.99</span>
                 </div>
                 <div class="summary-line total">
-                    <span>💰 Total:</span>
+                    <span> Total:</span>
                     <span id="cart-total">€5.99</span>
                 </div>
-                <button class="btn-checkout">💳 Proceder al Pago</button>
-                <button class="btn-clear" id="clear-cart">🗑️ Vaciar Carrito</button>
+                <button class="btn-checkout">Proceder al Pago</button>
+                <button class="btn-clear" id="clear-cart">Vaciar Carrito</button>
             </div>
         </div>
     </main>
@@ -682,4 +749,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

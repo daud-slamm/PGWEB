@@ -1,6 +1,4 @@
-/* ============================================
-   ESTILOS GENERALES
-   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +12,7 @@ body {
     color: #333;
 }
 
-/* ============================================
-   HEADER Y NAVEGACIÓN
-   ============================================ */
+
 header {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -101,9 +97,7 @@ nav a.active {
     font-weight: bold;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
+
 .hero {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
     padding: 4rem 2rem;
@@ -124,9 +118,7 @@ nav a.active {
     opacity: 0.95;
 }
 
-/* ============================================
-   SECCIÓN PRINCIPAL
-   ============================================ */
+
 main {
     max-width: 1200px;
     margin: 3rem auto;
@@ -141,9 +133,7 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* ============================================
-   PRODUCTOS - GRID
-   ============================================ */
+
 #product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -215,9 +205,7 @@ main {
     font-size: 0.95rem;
 }
 
-/* ============================================
-   PÁGINA DE PRODUCTO
-   ============================================ */
+
 .product-detail {
     background: white;
     border-radius: 20px;
@@ -299,9 +287,6 @@ main {
     color: #764ba2;
 }
 
-/* ============================================
-   CARRITO
-   ============================================ */
 .cart-page {
     background: white;
     border-radius: 20px;
@@ -371,9 +356,8 @@ main {
     background: #ff3838;
 }
 
-/* ============================================
-   CONTACTO
-   ============================================ */
+
+
 .contact-page {
     background: white;
     border-radius: 20px;
@@ -470,9 +454,7 @@ main {
     transform: scale(1.02);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+   
 footer {
     background: rgba(255, 255, 255, 0.95);
     text-align: center;
@@ -481,9 +463,6 @@ footer {
     color: #666;
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
